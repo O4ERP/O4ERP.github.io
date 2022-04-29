@@ -3,12 +3,12 @@
 
 :root {
     --site-ff: 'Noto Sans TC';      /* Noto Sans Traditional Chinese */
-    --site-font-size: 1em;          /* font size */
-    --site-title-font-size: 1.5em;  /* font size for titles */
+    --site-font-size: 1vw;          /* font size */
+    --site-title-font-size: 1.5vw;  /* font size for titles */
     --site-text-color: #ffffff;  /*  white */
     --landing-bk-color: aquamarine;
     --aboutus-pagetitle-text-color: #000000;
-    --aboutus-title-font-size: 1.2em;
+    --aboutus-title-font-size: 1.2vw;
     --aboutus-img-width: 30%;
 }
 
