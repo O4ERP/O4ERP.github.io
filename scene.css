@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+:root {
+    --site-ff: 'Noto Sans TC';      /* Noto Sans Traditional Chinese */
+    --site-font-size: 1vw;          /* font size */
+    --site-title-font-size: 1.5vw;  /* font size for titles */
+    --site-text-color: #ffffff;  /*  white */
+    --landing-bk-color: #4a9d9b;
+    --pagetitle-text-color: #000000;
+    --aboutus-title-font-size: 1.2vw;
+    --aboutus-img-width: 30%;
+}
+
+html {
+	margin: 0;
+	padding: 0;
+    font-family: var(--site-ff);
+    font-size: var(--site-font-size);
+    color: var(--site-text-color);
+}
+
+body { 
+    margin: 0; 
+    padding: 0;
+    background-color: var(--landing-bk-color);
+}
+
+.landing, .about_us {
+    width: 100%;
+    position: relative;
+}
+
+.landing .bk {
+     width: 100%;
+     max-width: 100%;
+     display: block;
+ }
+
+.landing .menu {
+    position: absolute;
+    top: 5%;
+    right: 20%;
+    display: inline-flex;
+}
+
+.landing .menu a {
+    padding: 15px;
+}
+
+.landing .overlay {
+    position: absolute;
+    top: 48%;
+    left: 20%;
+    width: 40%;
+    align-items: center;
+    display: flex;
+}
+
+.title {
+    margin: 0;
+    padding: 0;
+    font-size: var(--site-title-font-size);
+    display: flex;
+}
+
+.landing .logo_container {
+    width: 20%;
+    /*flex-basis: 20%;  /* scale down to 15% of the original image*/
+    display: flex;
+    /* order: 2; -- Image on the left */
+}
+
+.landing .logo {
+    width: 20%;
+    max-width: 100%;
+    display: flex;
+}
+
+.about_us .bk {
+    width: 100%;
+    max-width: 100%;
+    position: absolute;
+    display: block;
+}
+
+.page_title {
+    font-size: var(--site-title-font-size);
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    color: var(--pagetitle-text-color);
+}
+
+.about_us .title {
+    font-size: var(--aboutus-title-font-size);
+}
+
+.article_area {
+    position: relative;
+    align-items: center;
+    display: flex;
+    padding: 1%;
+    
+    background: #4a9d9b;
+    background: -moz-linear-gradient(90deg, #4a9d9b 0%, #e1b667 100%);
+    background: -webkit-linear-gradient(90deg, #4a9d9b 0%, #e1b667 100%);
+    background: linear-gradient(90deg, #4a9d9b 0%, #e1b667 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4a9d9b",endColorstr="#e1b667",GradientType=1);
+    border-radius: 100px;
+}
+
+.article_area .art {
+    width: var(--aboutus-img-width);
+    height: auto;
+    max-width: 100%;
+    display: flex;
+}
+
+.article_spacer_1 {
+    padding-top: 8%;
+}
+
+.article_1 {
+    left: 10%;
+    width: 40%;
+    padding-left: 5%;
+}
+
+.art_1 {
+    padding-left: 5%;
+    order: 2;
+}
+
+.article_spacer_2 {
+    padding-top: 1%;
+}
+
+.article_2 {
+    left: 45%;
+    width: 40%;
+    padding-right: 14%;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.art_2 {
+    padding-right: 5%;
+}
+
+.article_spacer_3 {
+    padding-top: 3%;
+}
+
+.article_3 {
+    left: 0;
+    width: 40%;
+    padding-left: 10%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.art_3 {
+    padding-left: 5%;
+    order: 2;
+}
+
+.close {
+    float: right;
+}
+    
+/* Style inputs with type="text", type="email", and textareas */
+input[type=text], input[type=email], textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 15px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+/*input[type=submit] {*/
+input[type=button] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+/*input[type=submit]:hover {*/
+input[type=button]:hover {
+    background-color: #45a049;
+}
+  
+  /* Add a background color and some padding around the form */
+.inquary_container {
+    width: 50%;
+    border-radius: 20px;
+    background-color: #f2f2f2;
+    opacity: 0.8;
+    padding: 20px;
+    color: var(--pagetitle-text-color);
+    align-items: center;
+    display: none;
+    top: 10%;
+    left: 20%;
+    position: absolute;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+    }
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+/* Styles */
+
+.inquary_container {
+    width: 100%;
+}
+
+}
+ 
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+/* Styles */
+}
+ 
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+/* Styles */
+}
+ 
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+/* Styles */
+}

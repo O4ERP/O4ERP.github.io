@@ -13,18 +13,20 @@
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
         <link rel="stylesheet" href="css/scene.css">
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
         <!--link rel="stylesheet" type="text/css" media="screen and (max-device-width: 480px)" href="css/mobile.css" /-->
-
+        <script src="scripts/landing.js"></script>
     </head>
     <body>
         <div class="landing">
             <img class="bk" src="imgs/landing_background.png">
             <div class="menu">
                 <a href="#About_Us">系統介紹</a>
-                <a>如何加入</a>
+                <a href="javascript:openInquaryDialog()">如何加入</a>
                 <a>登入</a>
             </div>
             <div class="overlay">
@@ -66,6 +68,24 @@
                 </div>
             </div>
         </div>
+        <div class="inquary_container" id="Inquary">
+            <form action="mailto:yubaba8@yahoo.com" method="post" enctype="text/plain">
+                <span class="close" onclick="closeInquaryDialog()">&times;</span>
+                <p>免費了解更多</p>
+                <label for="name">聯絡人*</label>
+                <i class="fa fa-user-o icon"></i><input type="text" id="name" name="name" placeholder="聯絡人姓名">
+                <label for="cellphone">手機*</label>
+                <i class="fa fa-mobile-phone icon"></i><input type="text" id="cellphone" name="cellphone" placeholder="09xxxx-xxxx">
+                <label for="email">E-Mail*</label>
+                <i class="fa fa-envelope-open-o icon"></i><input type="email" id="email" name="email" placeholder="xxx@xxx.com">
+                <label for="subject">留言</label>
+                <i class="fa fa fa-pencil-square-o icon"></i><textarea id="subject" name="subject" placeholder="留言" style="height:200px"></textarea>
+            
+                <!--input type="submit" value="送出"-->
+                <input type="button" value="送出">
+          
+            </form>
+          </div>
         <!--span class="material-icons">face</span-->
     </body>
 </html>
