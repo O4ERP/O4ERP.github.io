@@ -3,12 +3,12 @@
 
 :root {
     --site-ff: 'Noto Sans TC';      /* Noto Sans Traditional Chinese */
-    --site-font-size: 1vw;          /* font size */
-    --site-title-font-size: 1.5vw;  /* font size for titles */
+    --site-font-size: 16pt;          /* font size */
+    --site-title-font-size: 24pt;  /* font size for titles */
     --site-text-color: #ffffff;  /*  white */
     --landing-bk-color: #4a9d9b;
     --pagetitle-text-color: #000000;
-    --aboutus-title-font-size: 1.2vw;
+    --aboutus-title-font-size: 18pt;
     --aboutus-img-width: 30%;
 }
 
@@ -26,7 +26,7 @@ body {
     background-color: var(--landing-bk-color);
 }
 
-.landing, .about_us {
+.landing, .system_introduction {
     width: 100%;
     position: relative;
 }
@@ -40,7 +40,7 @@ body {
 .landing .menu {
     position: absolute;
     top: 5%;
-    right: 20%;
+    right: 15%;
     display: inline-flex;
 }
 
@@ -52,7 +52,7 @@ body {
     position: absolute;
     top: 48%;
     left: 20%;
-    width: 40%;
+    width: 45%;
     align-items: center;
     display: flex;
 }
@@ -77,7 +77,7 @@ body {
     display: flex;
 }
 
-.about_us .bk {
+.system_introduction .bk {
     width: 100%;
     max-width: 100%;
     position: absolute;
@@ -93,7 +93,7 @@ body {
     color: var(--pagetitle-text-color);
 }
 
-.about_us .title {
+.system_introduction .title {
     font-size: var(--aboutus-title-font-size);
 }
 
@@ -183,8 +183,7 @@ input[type=text], input[type=email], textarea {
 }
 
 /* Style the submit button with a specific background color etc */
-/*input[type=submit] {*/
-input[type=button] {
+input[type=submit] {
     background-color: #04AA6D;
     color: white;
     padding: 12px 20px;
@@ -194,8 +193,7 @@ input[type=button] {
 }
 
 /* When moving the mouse over the submit button, add a darker green color */
-/*input[type=submit]:hover {*/
-input[type=button]:hover {
+input[type=submit]:hover {
     background-color: #45a049;
 }
   
@@ -239,33 +237,122 @@ input[type=button]:hover {
     font-feature-settings: 'liga';
     }
 
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
-/* Styles */
+/* Desktop */
+@media screen and (min-width: 1024px) {
+    html {
+        font-size: 16pt;
+    }
 
-.inquary_container {
-    width: 100%;
+    .title, .page_title {
+        font-size: 24pt;
+    }
+
+    .system_introduction .title {
+        font-size: 18pt;
+    }
+    
 }
 
+/* Tablet - laptops: 769px to 1024px*/
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    html {
+        font-size: 14pt;
+    }
+
+    .title, .page_title {
+        font-size: 21pt;
+    }
+
+    .system_introduction .title {
+        font-size: 16pt;
+    }
+
+    .landing .menu {
+        right: 10%;
+        flex-direction: column;
+    }
+
+    .landing .menu a {
+        padding: 2px;
+    }
+    .landing .overlay {
+        top: 48%;
+        left: 20%;
+        width: 60%;
+    }
+
+    .article_1 {
+        left: 8%;
+        width: 60%;
+        padding-left: 5%;
+    }
+    .article_2 {
+        left: 20%;
+        width: 60%;
+        padding-right: 20%;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+    }
+    .article_3 {
+        left: 0;
+        width: 60%;
+        padding-left: 10%;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+                   
 }
- 
-/* Smartphones (landscape) ----------- */
-@media only screen
-and (min-width : 321px) {
-/* Styles */
-}
- 
-/* Smartphones (portrait) ----------- */
-@media only screen
-and (max-width : 320px) {
-/* Styles */
-}
- 
-/* iPads (portrait and landscape) ----------- */
-@media only screen
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) {
-/* Styles */
+
+/* Smart Phones - mobile devices: 320px to 480px, tablets and ipads: 481px to 768px */
+@media screen and (max-width: 767px) {
+    html {
+        font-size: 12pt;
+    }
+
+    .title, .page_title {
+        font-size: 18pt;
+    }
+
+    .system_introduction .title {
+        font-size: 14pt;
+    }
+
+    .landing .menu {
+        right: 5%;
+        flex-direction: column;
+    }
+    .landing .menu a {
+        padding: 2px;
+    }    
+    .landing .overlay {
+        top: 48%;
+        left: 10%;
+        width: 80%;
+    }
+
+    .article_spacer_1 {
+        padding-top: 17%;
+    }
+    .article_1 {
+        left: 5%;
+        width: 85%;
+        padding-left: 5%;
+    }
+    .article_2 {
+        left: 10%;
+        width: 85%;
+        padding-right: 5%;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+    }
+    .art_3 {
+        padding-left: 0;
+    }
+    .article_3 {
+        left: 0;
+        width: 85%;
+        padding-left: 10%;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
 }
