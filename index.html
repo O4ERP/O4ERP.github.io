@@ -18,15 +18,15 @@
         <link rel="stylesheet" href="css/scene.css">
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-        <!--link rel="stylesheet" type="text/css" media="screen and (max-device-width: 480px)" href="css/mobile.css" /-->
         <script src="scripts/landing.js"></script>
     </head>
     <body>
         <div class="landing">
             <img class="bk" src="imgs/landing_background.png">
             <div class="menu">
-                <a href="#About_Us">系統介紹</a>
-                <a href="javascript:openInquaryDialog()">如何加入</a>
+                <a href="#System_Introduction">系統介紹</a>
+                <a>方案介紹</a>
+                <a>如何加入</a>
                 <a>登入</a>
             </div>
             <div class="overlay">
@@ -40,7 +40,7 @@
             </div>
         </div>
 
-        <div class="about_us" id="About_Us">
+        <div class="system_introduction" id="System_Introduction">
             <img class="bk" src="imgs/aboutus_background.png">
             <p class="page_title">系統介紹</p>
             <div class="article_spacer_1"></div>
@@ -64,12 +64,13 @@
                 <img class="art art_3" alt="系統化管理" src="imgs/系統化管理.png">
                 <div>
                     <p class="title">系統化管理</p>
-                    <p>透過「O4! ERP」一套系統，完成餐飲業開發採購、庫存管理與各項營運數據分析報表 。</p>
+                    <p>透過「O4! ERP」一套系統, 完成餐飲業開發採購, 庫存管理與各項營運數據分析報表 。</p>
                 </div>
             </div>
         </div>
+
         <div class="inquary_container" id="Inquary">
-            <form action="mailto:yubaba8@yahoo.com" method="post" enctype="text/plain">
+            <form action="http://localhost:3000/php/sendemail.php" method="post" enctype="multipart/form-data">
                 <span class="close" onclick="closeInquaryDialog()">&times;</span>
                 <p>免費了解更多</p>
                 <label for="name">聯絡人*</label>
@@ -78,11 +79,10 @@
                 <i class="fa fa-mobile-phone icon"></i><input type="text" id="cellphone" name="cellphone" placeholder="09xxxx-xxxx">
                 <label for="email">E-Mail*</label>
                 <i class="fa fa-envelope-open-o icon"></i><input type="email" id="email" name="email" placeholder="xxx@xxx.com">
-                <label for="subject">留言</label>
-                <i class="fa fa fa-pencil-square-o icon"></i><textarea id="subject" name="subject" placeholder="留言" style="height:200px"></textarea>
+                <label for="msg">留言</label>
+                <i class="fa fa fa-pencil-square-o icon"></i><textarea id="msg" name="msg" placeholder="留言" style="height:200px"></textarea>
             
-                <!--input type="submit" value="送出"-->
-                <input type="button" value="送出">
+                <input type="submit" value="送出">
           
             </form>
           </div>
