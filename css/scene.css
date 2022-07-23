@@ -237,9 +237,12 @@ strikethrough {
     margin-left: auto;
     margin-right: auto;
     vertical-align: middle;
+
+    border-collapse: separate;
+    border-spacing: 2% 20px;
 }
 
-td {
+.how_to_join .process_area td {
     width: 100px;
     height: 100px;
     text-align: center;
@@ -248,6 +251,18 @@ td {
 .how_to_join .process_area .process_steps td {
     border: 2px solid #ffffff;
     border-radius: 100px;
+}
+
+.footer {
+    background-color: #000000;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+
+    width: 100%;
+    font-size: 12px;
+    padding: 2% 0 2% 0;
+    column-gap: 5%;
 }
 
 .close {
@@ -476,11 +491,16 @@ input[type=submit]:hover {
     .how_to_join .process_area {
         font-size: 10px;
     }    
-    td {
+    .how_to_join .process_area td {
         width: 65px;
         height: 65px;
      }
      .how_to_join .process_area .process_steps td {
         border-radius: 65px;
     }
+    .footer {
+        font-size: 10px;
+        column-gap: 3%;
+    }
+    
 }
