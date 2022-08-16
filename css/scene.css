@@ -9,6 +9,7 @@
     --site-bk-color: #379aa4; 
     --site-bk-color2: #f5b85f;
     --pagetitle-text-color: #3c3c3c;
+    --dialogbox-text-color: #858585;
     --aboutus-title-font-size: 18pt;
     --aboutus-img-width: 30%;
 }
@@ -329,20 +330,20 @@ strikethrough {
 /* Style inputs with type="text", type="email", and textareas */
 input[type=text], input[type=email], textarea {
     width: 100%; /* Full width */
-    padding: 12px; /* Some padding */ 
+    padding: 10px; /* Some padding */ 
     border: 1px solid #ccc; /* Gray border */
     border-radius: 15px; /* Rounded borders */
     box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
+    margin-top: 4px; /* Add a top margin */
+    margin-bottom: 4px; /* Bottom margin */
     resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
 /* Style the submit button with a specific background color etc */
 input[type=submit] {
-    background-color: var(--site-bk-color);
+    background-color: var(--site-bk-color2);
     color: white;
-    padding: 12px 20px;
+    padding: 10px 20px;
     border: none;
     border-radius: 15px;
     cursor: pointer;
@@ -352,20 +353,56 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: var(--site-bk-color);
 }
+
+::placeholder {
+    color: #ccc;
+    opacity: 0.5;
+}
   
   /* Add a background color and some padding around the form */
 .inquary_container {
-    width: 50%;
-    border-radius: 20px;
+    width: 30%;
+    border-radius: 10px;
     background-color: #f2f2f2;
     opacity: 0.8;
-    padding: 20px;
-    color: var(--pagetitle-text-color);
-    align-items: center;
-    display: none;
-    top: 10%;
-    left: 20%;
+    padding: 10px;
+    color: var(--dialogbox-text-color);
+    /*align-items: right;
+    display: none;*/
+    top: 15%;
+    right: 10%;
     position: absolute;
+    font-size: 14px;
+}
+
+.inquary_container table {
+    width: 100%;
+}
+
+.right_align {
+    text-align: right;
+    vertical-align: top;
+    padding: 10px 5px 0px 0px;
+}
+
+.inquary_container p {
+    color: var(--pagetitle-text-color);
+    font-size: var(--site-font-size);
+    padding-left: 5%;
+    padding-top: 0;
+}
+
+.disclaimer {
+    width: 50%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    border-color: #ccc;
+    font-size: 12px;
+    text-align: center;
+}
+
+.disclaimer::backdrop {
+    backdrop-filter: blur(3px);
 }
 
 .material-icons {
