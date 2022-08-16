@@ -38,9 +38,54 @@
                     輕鬆完成餐飲業採購、庫存及成本管理<br>
                 </div>
             </div>
-            <!--div>
-                <i class="fa fa-comment-o" aria-hidden="true"></i>
-            </div-->
+            <div class="inquary_container" id="Inquary">
+                <!--form action="http://localhost:3000/php/sendemail.php" method="post" enctype="multipart/form-data"-->
+                <form>
+                    <p>免費了解更多</p>             
+                    <table>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="checkbox" id="restaurateur" name="restaurateur" value="餐飲業者">
+                                <label for="restaurateur">餐飲業者</label>
+                                <a href="#"><i class="fa fa-question-circle-o" title="餐飲業者"></i></a>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="supplier" name="supplier" value="供應商">
+                                <label for="supplier">供應商</label>
+                                <a href="#"><i class="fa fa-question-circle-o" title="供應商"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="right_align"><label for="name">聯絡人*<i class="fa fa-user-o icon"></i></label></td>
+                            <td colspan="2"></i><input type="text" id="name" name="name" placeholder="聯絡人姓名" oninvalid="this.setCustomValidity('請輸入姓名')" oninput="this.setCustomValidity('')"" required></td>
+                        </tr>
+                        <tr>
+                            <td class="right_align"><label for="cellphone">手機*</label><i class="fa fa-mobile-phone icon"></i></td>
+                            <td colspan="2"><input type="text" id="cellphone" name="cellphone" placeholder="09xxxx-xxxx" oninvalid="this.setCustomValidity('請輸入手機號')" oninput="this.setCustomValidity('')"" required></td>
+                        </tr>
+                        <tr>
+                            <td class="right_align"><label for="email">E-Mail*</label><i class="fa fa-envelope-open-o icon"></i></td>
+                            <td colspan="2"><input type="email" id="email" name="email" placeholder="xxx@xxx.com" oninvalid="this.setCustomValidity('請輸入e-Mail')" oninput="this.setCustomValidity('')"" required></td>
+                        </tr>
+                        <tr>
+                            <td class="right_align"><label for="msg">留言</label><i class="fa fa fa-pencil-square-o icon"></i></td>
+                            <td colspan="2"><textarea id="msg" name="msg" placeholder="留言" style="height:150px"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="2">
+                                <input type="checkbox" id="privacy_statement" name="privacy_statement" value="已閱讀" oninvalid="this.setCustomValidity('請讀')" oninput="this.setCustomValidity('')"" required>
+                                <label for="privacy_statement">我已閱讀並同意<a href="" onclick="window.disclaimer.showModal(); return false;">隱私權政策</a></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="right_align"><input type="submit" onclick="closeInquaryDialog();" value="送出"></td>
+                        </tr>                   
+                    </table>
+              
+                </form>
+            </div>
         </div>
 
         <div class="system_introduction" id="System_Introduction">
@@ -106,10 +151,10 @@
             <p class="page_title">如何加入 o4!</p>
             <table class="process_area">
                 <tr>
-                    <td colspan="2"><img src="imgs/howtojoin_users.svg"></td>
-                    <td><img src="imgs/howtojoin_signature.svg"></td>
-                    <td colspan="2"><img src="imgs/howtojoin_account.svg"></td>
-                    <td><img src="imgs/howtojoin_truck.svg"></td>
+                    <td colspan="2"><img src="imgs/howtojoin_users.svg" alt="詳細介紹""></td>
+                    <td><img src="imgs/howtojoin_signature.svg" alt="簽約"></td>
+                    <td colspan="2"><img src="imgs/howtojoin_account.svg" alt="建立資料"></td>
+                    <td><img src="imgs/howtojoin_truck.svg" alt="下單"></td>
                 </tr>
                 <hr>
                 <tr>
@@ -170,26 +215,15 @@
             </div>
             <hr>
             <div class="copyright">
-                Copyright 
+                ©2022 o4ERP LLC, All rights reserved.
             </div>
         </div>
-
-        <div class="inquary_container" id="Inquary">
-            <form action="http://localhost:3000/php/sendemail.php" method="post" enctype="multipart/form-data">
-                <span class="close" onclick="closeInquaryDialog()">&times;</span>
-                <p>免費了解更多</p>
-                <label for="name">聯絡人*</label>
-                <i class="fa fa-user-o icon"></i><input type="text" id="name" name="name" placeholder="聯絡人姓名">
-                <label for="cellphone">手機*</label>
-                <i class="fa fa-mobile-phone icon"></i><input type="text" id="cellphone" name="cellphone" placeholder="09xxxx-xxxx">
-                <label for="email">E-Mail*</label>
-                <i class="fa fa-envelope-open-o icon"></i><input type="email" id="email" name="email" placeholder="xxx@xxx.com">
-                <label for="msg">留言</label>
-                <i class="fa fa fa-pencil-square-o icon"></i><textarea id="msg" name="msg" placeholder="留言" style="height:200px"></textarea>
-            
-                <input type="submit" value="送出">
-          
+        <dialog id="disclaimer" class="disclaimer">
+            <form method="dialog">
+                <p>隱私權政策</p>
+                <p>placeholder here</p>
+                <button>關閉</button>
             </form>
-          </div>
+        </dialog>
     </body>
 </html>
