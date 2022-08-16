@@ -341,7 +341,7 @@ input[type=text], input[type=email], textarea {
 
 /* Style the submit button with a specific background color etc */
 input[type=submit] {
-    background-color: var(--site-bk-color2);
+    background-color: var(--site-bk-color);
     color: white;
     padding: 10px 20px;
     border: none;
@@ -351,7 +351,7 @@ input[type=submit] {
 
 /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
-    background-color: var(--site-bk-color);
+    background-color: var(--site-bk-color2);
 }
 
 ::placeholder {
@@ -460,6 +460,10 @@ input[type=submit]:hover {
         font-size: 16pt;
     }
 
+    .landing {
+        height: 1000px;
+    }
+
     .landing .menu {
         left: 75%;
         flex-direction: column;
@@ -471,11 +475,21 @@ input[type=submit]:hover {
     }
 
     .landing .overlay {
-        top: 48%;
+        top: 25%;
         left: 20%;
         width: 60%;
     }
 
+    .inquary_container {
+        width: 50%;
+        top: 40%;
+        left: 25%;
+        font-size: 12px;
+    }
+    .inquary_container p {
+        font-size: 14px;
+    }    
+    
     .article_spacer_1 {
         padding-top: 10%;
     }
@@ -534,6 +548,10 @@ input[type=submit]:hover {
         font-size: 14pt;
     }
 
+    .landing {
+        height: 700px;
+    }
+
     .landing .menu {
         left: 70%;
         flex-direction: column;
@@ -545,11 +563,21 @@ input[type=submit]:hover {
     }    
 
     .landing .overlay {
-        top: 48%;
+        top: 12%;
         left: 10%;
         width: 80%;
     }
 
+    .inquary_container {
+        width: 70%;
+        top: 30%;
+        left: 15%;
+        font-size: 10px;
+    }
+    .inquary_container p {
+        font-size: 12px;
+    }    
+    
     .article_spacer_1 {
         padding-top: 15%;
     }
