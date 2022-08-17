@@ -26,6 +26,7 @@ body {
     margin: 0; 
     padding: 0;
     background-color: var(--site-bk-color);
+    display:block;
 }
 
 .landing, .system_introduction {
@@ -37,7 +38,7 @@ body {
      width: 100%;
      max-width: 100%;
      display: block;
- }
+}
 
 .landing .menu {
     position: absolute;
@@ -203,7 +204,7 @@ body {
 
     border-radius: 15px; /* Rounded borders */
     background-color: #ffffff;
-    box-shadow: 3px 3px 5px #ccc;
+    box-shadow: 3px 3px 5px #7f7f7f;
 
     width: 15%;
     height: 300px;
@@ -228,6 +229,15 @@ strikethrough {
     color: var(--site-text-color);
 
     background: var(--site-bk-color);
+    background: -moz-linear-gradient(90deg, var(--site-bk-color) 0%, var(--site-bk-color2) 100%);
+    background: -webkit-linear-gradient(90deg, var(--site-bk-color) 0%, var(--site-bk-color2) 100%);
+    background: linear-gradient(90deg, var(--site-bk-color) 0%, var(--site-bk-color2) 100%);
+
+    box-shadow: inset 0px, -6px, 9px, rgba(0, 0, 0, 0.25);
+    box-shadow: inset 0px, 7px, 4px, rgba(255, 255, 255, 0.25);
+    box-shadow: 0px, 4px, 4px, rgba(0, 0, 0, 0.25);
+
+    border: var(--site-bk-color);
 }
 
 .how_to_join hr {
@@ -514,7 +524,7 @@ input[type=submit]:hover {
     }
 
     .paid_plans .plan_area {
-        flex-direction: column;
+        flex-direction: row; /*column;*/
         justify-content: center;
         align-items: center;
         row-gap: 15px;
